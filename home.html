@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReferHer - Your Health Screening Partner</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Theme colors */
+    :root {
+      --purple-light: #d6b8ff;
+      --purple-dark: #6e3cbc;
+      --white-soft: #fcf8ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white-soft);
+      color: var(--purple-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: var(--purple-dark);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      user-select: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--purple-light);
+    }
+
+    /* Main content */
+    main {
+      flex-grow: 1;
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.lead {
+      font-size: 1.2rem;
+      color: #5b3e99;
+      margin-bottom: 2rem;
+    }
+
+    /* Call to action button */
+    .btn-primary {
+      background-color: var(--purple-dark);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(110, 60, 188, 0.3);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background-color: #5a2f9c;
+    }
+
+    /* Section with Google Form */
+    .form-section {
+      margin-top: 3rem;
+      background: var(--purple-light);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(110, 60, 188, 0.2);
+      text-align: center;
+    }
+
+    .form-section a {
+      color: var(--purple-dark);
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--purple-dark);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Social icons container */
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    /* Social icon style */
+    .social-icons a img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      filter: brightness(0.7) invert(1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <!-- Replace this with your logo when ready -->
+    <div class="logo">ReferHer</div>
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="form.html">Screening</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Welcome to ReferHer</h1>
+    <p class="lead">Your trusted partner for women's reproductive health screening and support.</p>
+    <a href="form.html" class="btn-primary">Start Your Free Screening</a>
+
+    <section class="form-section">
+      <h2>Screening Form</h2>
+      <p>Fill out our quick reproductive health screening form.</p>
+      <a href="https://forms.gle/6mYm752am6EG6aENA" target="_blank" rel="noopener noreferrer">Open Google Form</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us: +234 8109578386 | Email: contact@referher.org</p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/referher-hq" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://tiktok.com/@referher-hq" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
+      </a>
+      <a href="https://twitter.com/referher-hq" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
