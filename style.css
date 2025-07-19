@@ -1,11 +1,12 @@
-/* Base Styles */
+/* General Reset and Fonts */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   height: 100%;
-  background-color: #f9f6ff; /* Soft white */
-  color: #3c1053; /* Deep purple text */
+  background-color: #f9f6ff; /* Soft light purple background */
+  color: #000000; /* Professional black text */
+  scroll-behavior: smooth;
 }
 
 /* Splash Screen */
@@ -15,105 +16,45 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #f3e5f5, #d1c4e9); /* Two purple shades */
-  animation: fadeIn 2s ease-in-out;
+  background: linear-gradient(135deg, #e6d6f5, #f9f6ff); /* light purple gradient */
+  animation: fadeIn 1.2s ease-in-out;
   text-align: center;
 }
 
-.logo {
-  user-select: none;
+.splash-screen h1 {
+  font-size: 3rem;
+  color: #7b1fa2; /* Purple theme */
   margin-bottom: 20px;
 }
 
-.logo img {
-  width: 100px;
-  height: auto;
-  display: block;
-}
-
-/* Titles */
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #4a148c; /* Rich purple */
-}
-
-h2, h3 {
-  color: #6a1b9a;
-  text-align: center;
-}
-
-/* Buttons */
-.button-group {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.button {
+.splash-screen .button {
+  margin: 10px;
   padding: 12px 24px;
-  font-size: 1em;
-  background-color: #7b1fa2; /* Medium purple */
+  background-color: #7b1fa2;
   color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-}
-
-.button:hover {
-  background-color: #4a148c; /* Darker purple */
-}
-
-/* Animation */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* --- HOME PAGE STYLES --- */
-
-/* Main Welcome Section */
-.main-container {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.welcome-text {
-  font-size: 1.5em;
-  margin-bottom: 30px;
-}
-
-/* Screening Button */
-.screening-button {
-  background-color: #8e24aa;
-  padding: 15px 30px;
   border: none;
   border-radius: 30px;
-  color: white;
-  font-size: 1.1em;
   cursor: pointer;
-  text-decoration: none;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
-.screening-button:hover {
-  background-color: #6a1b9a;
+.splash-screen .button:hover {
+  background-color: #4a148c;
 }
 
-/* Navigation Bar */
-.navbar {
+/* Page Header */
+header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background-color: #ede7f6;
   align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.navbar .logo img {
-  width: 60px;
+header img.logo {
+  height: 40px;
 }
 
 .nav-links {
@@ -122,40 +63,101 @@ h2, h3 {
 }
 
 .nav-links a {
-  color: #6a1b9a;
   text-decoration: none;
+  color: #000000;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #4a148c;
+  color: #7b1fa2;
+}
+
+/* Sections */
+.section {
+  padding: 60px 30px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #4a148c;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 /* Footer */
-.footer {
-  padding: 40px 20px;
+footer {
   background-color: #f3e5f5;
+  color: #000000;
+  padding: 30px;
   text-align: center;
-  margin-top: 50px;
-  border-top: 1px solid #d1c4e9;
+  font-size: 0.9rem;
 }
 
-.footer p {
-  margin: 10px 0;
-  color: #6a1b9a;
-  font-size: 0.9em;
+/* Smooth Bounce Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Social Icons */
-.social-icons {
+/* Splash Links */
+.splash-screen .splash-links {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 15px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
 }
 
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+/* Screening Button (only applies if on page) */
+#screening-button {
+  display: inline-block;
+  background-color: #7b1fa2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+#screening-button:hover {
+  background-color: #4a148c;
 }
