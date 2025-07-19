@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to ReferHer</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Colors */
+    :root {
+      --purple-light: #d6b8ff; /* soft light purple */
+      --purple-dark: #6e3cbc;  /* darker purple */
+      --white-soft: #fcf8ff;
+    }
+
+    /* Basic Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: var(--purple-light);
+      color: var(--purple-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      animation: backgroundPulse 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes backgroundPulse {
+      0% { background-color: #d6b8ff; }
+      100% { background-color: #c4a3ff; }
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 2rem;
+      background: var(--white-soft);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(110, 60, 188, 0.3);
+      animation: bounceIn 1s ease forwards;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Logo placeholder */
+    .logo-placeholder {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--purple-dark);
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    /* Buttons */
+    .btn-group {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    button {
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: white;
+      background: var(--purple-dark);
+      transition: background 0.3s ease;
+      box-shadow: 0 5px 10px rgba(110, 60, 188, 0.4);
+    }
+
+    button:hover {
+      background: #5a2f9c;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Logo placeholder - replace with your actual logo image tag when ready -->
+    <div class="logo-placeholder">ReferHer</div>
+
+    <div class="btn-group">
+      <a href="signin.html"><button>Sign In</button></a>
+      <a href="signup.html"><button>Sign Up</button></a>
+      <a href="home.html"><button>Continue without signing in</button></a>
+    </div>
+  </div>
+</body>
+</html>
