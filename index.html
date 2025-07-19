@@ -1,36 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Welcome to ReferHer</title>
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  
+
   <style>
-    /* Colors */
     :root {
-      --purple-light: #d6b8ff; /* soft light purple */
-      --purple-dark: #6e3cbc;  /* darker purple */
+      --purple-light: #d6b8ff;
+      --purple-dark: #6e3cbc;
       --white-soft: #fcf8ff;
     }
 
-    /* Basic Reset */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
       background: var(--purple-light);
-      color: var(--purple-dark);
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      overflow: hidden;
       animation: backgroundPulse 6s ease-in-out infinite alternate;
     }
 
@@ -40,11 +38,12 @@
     }
 
     .container {
-      max-width: 400px;
+      max-width: 420px;
       padding: 2rem;
       background: var(--white-soft);
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(110, 60, 188, 0.3);
+      text-align: center;
       animation: bounceIn 1s ease forwards;
     }
 
@@ -59,17 +58,11 @@
       }
     }
 
-    /* Logo placeholder */
-    .logo-placeholder {
-      font-weight: 700;
-      font-size: 3rem;
+    .logo {
+      height: 70px;
       margin-bottom: 1rem;
-      color: var(--purple-dark);
-      letter-spacing: 0.05em;
-      user-select: none;
     }
 
-    /* Buttons */
     .btn-group {
       margin-top: 2rem;
       display: flex;
@@ -97,16 +90,12 @@
     a {
       text-decoration: none;
       color: inherit;
-      display: block;
     }
   </style>
 </head>
-
 <body>
   <div class="container">
-    <!-- Logo placeholder - replace with your actual logo image tag when ready -->
-    <img src="logo.png" alt="ReferHer Logo" style="height: 70px; margin-bottom: 1rem;" />
-
+    <img src="logo.png" alt="ReferHer Logo" class="logo" />
 
     <div class="btn-group">
       <a href="signin.html"><button>Sign In</button></a>
