@@ -1,140 +1,165 @@
-/* style.css for ReferHer */
-
+/* === GLOBAL STYLES === */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fdfbff;
-  color: #000000;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f4fc; /* soft white */
+  color: black;
 }
 
-header {
-  background-color: #e6ccf2; /* soft purple */
+h1, h2, h3, h4, h5, h6, p, li, a {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* === HEADER AND SIDEBAR === */
+.top-header {
+  background-color: #d4b6f4; /* soft purple */
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #000;
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  height: 40px;
   cursor: pointer;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 0;
-    border-left: 2px solid #000;
-  }
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-section {
-  padding: 2rem;
-  border: 2px solid #000;
-  margin: 1rem;
-  border-radius: 1rem;
-  background-color: #ffffff;
-  animation: bounceIn 1s ease;
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-button {
-  background-color: #c699e6; /* soft purple */
-  color: #000;
-  padding: 0.5rem 1rem;
-  border: 2px solid #000;
-  border-radius: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #b577d1;
-}
-
-footer {
-  background-color: #e6ccf2;
-  color: #000;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  border-top: 2px solid #000;
-}
-
-/* Sidebar styles */
 .sidebar {
-  height: 100%;
-  width: 0;
+  width: 250px;
+  background-color: #e7d7f9; /* lighter purple */
   position: fixed;
-  z-index: 1;
   top: 0;
-  left: 0;
-  background-color: #f0e6f7;
-  overflow-x: hidden;
-  transition: 0.3s;
+  left: -250px;
+  height: 100%;
   padding-top: 60px;
-  border-right: 2px solid #000;
+  transition: left 0.3s ease;
+  border-right: 1px solid black;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
 }
 
 .sidebar a {
-  padding: 10px 15px;
   text-decoration: none;
-  font-size: 18px;
-  color: #000;
+  color: black;
   display: block;
-  transition: 0.3s;
+  font-weight: 500;
 }
 
 .sidebar a:hover {
-  background-color: #e6ccf2;
+  background-color: #d4b6f4;
 }
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-size: 36px;
+/* === CONTENT BOX === */
+.content-box {
+  padding: 2rem;
+  margin-left: 0;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
-.openbtn {
-  font-size: 20px;
+.box-outline {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: #fdfbff;
+}
+
+/* === BUTTON === */
+button, .volunteer-btn {
+  background-color: #b58af0;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
-  background-color: #c699e6;
-  color: #000;
-  padding: 10px 15px;
-  border: 2px solid #000;
-  border-radius: 1rem;
-  margin-left: 1rem;
+  transition: background-color 0.3s;
 }
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 16px;}
+button:hover, .volunteer-btn:hover {
+  background-color: #a06fe0;
+}
+
+/* === SPLASH PAGE === */
+.splash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e5d0fa, #f3ebff);
+  animation: pulseBackground 6s ease-in-out infinite;
+}
+
+@keyframes pulseBackground {
+  0% { background: #f3ebff; }
+  50% { background: #e5d0fa; }
+  100% { background: #f3ebff; }
+}
+
+.splash-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.splash-buttons button {
+  margin: 0.5rem;
+  width: 220px;
+}
+
+/* === RESPONSIVENESS === */
+@media screen and (max-width: 768px) {
+  .content-box {
+    padding: 1rem;
+  }
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+  .sidebar li {
+    padding: 8px 15px;
+  }
+  .splash-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .splash-buttons button {
+    width: 180px;
+  }
+}
+
+/* === FOOTER (Optional Future Section) === */
+.footer {
+  background-color: #d4b6f4;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid black;
 }
