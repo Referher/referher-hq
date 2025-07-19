@@ -1,0 +1,86 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReferHer | Volunteer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html">Donate</a></li>
+    </ul>
+  </div>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <img src="your-logo.png" alt="ReferHer Logo" class="logo" onclick="toggleSidebar()" />
+  </div>
+
+  <!-- Main Content -->
+  <section class="content-box">
+    <h1>Join the ReferHer Volunteer Team</h1>
+
+    <p>
+      Are you passionate about women’s health, reproductive rights, or community service?
+      <strong>ReferHer</strong> welcomes you to become part of a network making real change.
+      Whether you’re a student, healthcare worker, advocate, or concerned citizen — there's a role for you!
+    </p>
+
+    <div class="volunteer-section">
+      <h2>Why Volunteer?</h2>
+      <ul>
+        <li>✅ Help young women access screening and referrals</li>
+        <li>✅ Educate others about reproductive health and safety</li>
+        <li>✅ Contribute to field campaigns or digital outreach</li>
+        <li>✅ Add meaningfully to your CV and community experience</li>
+      </ul>
+    </div>
+
+    <div class="volunteer-section">
+      <h2>Who Can Volunteer?</h2>
+      <p>
+        We welcome young people aged 16–35 from all backgrounds — especially those interested in health,
+        advocacy, digital tech, education, or grassroots organizing. No medical background is required.
+      </p>
+    </div>
+
+    <div class="volunteer-section">
+      <h2>Ways to Get Involved</h2>
+      <ul>
+        <li>📍 Field Campaign Volunteer (screening, surveys, awareness drives)</li>
+        <li>📲 Online Advocate (help promote, share updates, educate digitally)</li>
+        <li>🧾 Data/Feedback Assistant (track form responses & stories)</li>
+        <li>🫂 Peer Supporter (guide other young women to safe services)</li>
+      </ul>
+    </div>
+
+    <div class="volunteer-section">
+      <h2>Ready to Sign Up?</h2>
+      <p>
+        Complete the short form below and we’ll get back to you with next steps.
+        All our volunteers receive guidance and are part of a supportive team!
+      </p>
+      <form action="https://forms.gle/6mYm752am6EG6aENA" method="GET" target="_blank">
+        <button class="volunteer-btn">Sign Up to Volunteer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+    }
+  </script>
+
+</body>
+</html>
